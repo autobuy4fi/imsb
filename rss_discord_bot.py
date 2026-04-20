@@ -21,7 +21,10 @@ MODEL = "claude-haiku-4-5-20251001"
 
 
 def fetch_articles(source: str, url: str) -> list[dict]:
-    headers = {"User-Agent": "Mozilla/5.0 (compatible; RSSBot/1.0)"}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "application/rss+xml, application/xml, text/xml, */*",
+    }
     resp = requests.get(url, headers=headers, allow_redirects=True, timeout=10)
     resp.raise_for_status()
     feed = feedparser.parse(resp.content)
