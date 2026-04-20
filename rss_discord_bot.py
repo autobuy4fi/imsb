@@ -21,7 +21,10 @@ MODEL = "claude-haiku-4-5-20251001"
 
 
 def fetch_articles(source: str, url: str) -> list[dict]:
-    feed = feedparser.parse(url)
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; RSSBot/1.0)"}
+    resp = requests.get(url, headers=headers, allow_redirects=True, timeout=10)
+    resp.raise_for_status()
+    feed = feedparser.parse(resp.content)
     articles = []
     for entry in feed.entries[:MAX_ARTICLES_PER_FEED]:
         summary = getattr(entry, "summary", "") or ""
