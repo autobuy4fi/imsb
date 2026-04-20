@@ -12,7 +12,7 @@ DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
 RSS_FEEDS = {
     "GeekNews": "https://news.hada.io/rss",
-    "요즘IT": "https://yozm.wishket.com/magazine/rss/",
+    "요즘IT": "https://yozm.wishket.com/magazine/feed/",
 }
 
 MAX_ARTICLES_PER_FEED = 3   # 테스트용: 빠르게 확인하려면 3개
