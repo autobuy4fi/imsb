@@ -15,9 +15,9 @@ RSS_FEEDS = {
     "요즘IT": "https://yozm.wishket.com/magazine/rss/",
 }
 
-MAX_ARTICLES_PER_FEED = 10
-SCORE_THRESHOLD = 3
-MODEL = "claude-sonnet-4-20250514"
+MAX_ARTICLES_PER_FEED = 3   # 테스트용: 빠르게 확인하려면 3개
+SCORE_THRESHOLD = 1         # 테스트용: 모든 기사 통과
+MODEL = "claude-haiku-4-5-20251001"
 
 
 def fetch_articles(source: str, url: str) -> list[dict]:
@@ -41,9 +41,9 @@ def score_article(client: anthropic.Anthropic, article: dict) -> tuple[int, str]
 제목: {article['title']}
 요약: {article['summary']}
 
-응답 형식 (다른 내용 없이 정확히 아래 형식으로):
-점수: <숫자>
-한줄요약: <요약 텍스트>"""
+반드시 아래 형식으로만 응답해. 한국어로. 다른 말은 하지 마:
+점수: 3
+한줄요약: 여기에 한 줄 요약"""
 
     message = client.messages.create(
         model=MODEL,
