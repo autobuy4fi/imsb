@@ -1,4 +1,5 @@
 import os
+import re
 import feedparser
 import requests
 import anthropic
@@ -24,8 +25,6 @@ def fetch_articles(source: str, url: str) -> list[dict]:
     articles = []
     for entry in feed.entries[:MAX_ARTICLES_PER_FEED]:
         summary = getattr(entry, "summary", "") or ""
-        # strip HTML tags simply
-        import re
         summary = re.sub(r"<[^>]+>", "", summary).strip()
         articles.append({
             "source": source,
@@ -53,17 +52,18 @@ def score_article(client: anthropic.Anthropic, article: dict) -> tuple[int, str]
     )
 
     text = message.content[0].text.strip()
+    print(f"    Claude 응답: {text[:80]}")
+
     score = 0
     one_line = ""
 
-    for line in text.splitlines():
-        if line.startswith("점수:"):
-            try:
-                score = int(line.split(":")[1].strip())
-            except ValueError:
-                score = 0
-        elif line.startswith("한줄요약:"):
-            one_line = line.split(":", 1)[1].strip()
+    score_match = re.search(r"점수\s*:\s*([1-5])", text)
+    if score_match:
+        score = int(score_match.group(1))
+
+    summary_match = re.search(r"한줄요약\s*:\s*(.+)", text)
+    if summary_match:
+        one_line = summary_match.group(1).strip()
 
     return score, one_line
 
