@@ -26,6 +26,9 @@ def fetch_articles(source: str, url: str) -> list[dict]:
         "Accept": "application/rss+xml, application/xml, text/xml, */*",
     }
     resp = requests.get(url, headers=headers, allow_redirects=True, timeout=10)
+    if resp.status_code == 403:
+        print(f"  ⚠ {url} 접근 차단(403) — 건너뜁니다.")
+        return []
     resp.raise_for_status()
     feed = feedparser.parse(resp.content)
     articles = []
