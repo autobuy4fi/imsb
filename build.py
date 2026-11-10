@@ -52,11 +52,17 @@ def badge(b):
     return f'<span class="badge">{e(b["badge"])}</span>' if b.get("badge") else ""
 
 
+def review(b):
+    if not b.get("review"):
+        return ""
+    return (f'<a class="review" href="{e(b["review"])}" target="_blank" rel="noopener"'
+            f' aria-label="{e(b["title"])} 편집 후기">편집 후기 →</a>')
+
+
 def build(data):
     books = data["books"]
     newest = list(reversed(books))
     n = len(books)
-    by_cover = {b["cover"]: b for b in books}
 
     title = f"{NAME} | {PUBLISHER} IT·실용서 편집자 포트폴리오"
     # 검색 결과에 잘리지 않도록 100자 안팎으로 둔다
@@ -105,6 +111,7 @@ def build(data):
                             "image": SITE + f"covers/{b['cover']}.jpg",
                             "url": b["link"],
                             "inLanguage": "ko",
+                            **({"subjectOf": {"@type": "BlogPosting", "url": b["review"], "name": f"{b['title']} 편집 후기", "author": {"@id": person_id}}} if b.get("review") else {}),
                         },
                     }
                     for i, b in enumerate(newest)
@@ -136,7 +143,17 @@ def build(data):
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False, separators=(",", ":"))}</script>
 """
 
-    fan = "".join(f'<div class="bk">{img(by_cover[c], "", lazy=False)}</div>' for c in data["featured"])
+    # 첫 화면 표지: 최근 책 hero_recent 권 가운데 5권을 방문할 때마다 무작위로 고른다.
+    # 자바스크립트가 없을 때는 가장 최근 5권이 보인다.
+    recent = newest[:data["hero_recent"]]
+    pool = json.dumps([[b["cover"], b["title"], b["date"], tone(b["category"])] for b in recent], ensure_ascii=False)
+    fan = "".join(f'<div class="bk">{img(b, "", lazy=False)}</div>' for b in recent[:5]) + f"""<script>
+(() => {{
+  const pool = {pool}, imgs = document.currentScript.parentNode.querySelectorAll("img");
+  for (let i = pool.length - 1; i > 0; i--) {{ const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }}
+  imgs.forEach((el, i) => {{ const [c, t, d, tone] = pool[i]; el.src = "covers/" + c + ".jpg"; Object.assign(el.dataset, {{title: t, date: d, tone}}); }});
+}})();
+</script>"""
 
     cats = ["전체", *TONES]
     filters = "".join(
@@ -146,10 +163,12 @@ def build(data):
     )
 
     grid = "\n".join(
-        f'<a class="book" data-cat="{b["category"]}" href="{e(b["link"])}" target="_blank" rel="noopener">'
+        f'<article class="book" data-cat="{b["category"]}">'
+        f'<a class="book-link" href="{e(b["link"])}" target="_blank" rel="noopener">'
         f'<div class="cover">{badge(b)}'
         f'{img(b, b["title"] + " 표지", lazy=i >= 6)}</div>'
         f'<h3>{e(b["title"])}</h3><p><time datetime="{iso_month(b["date"])}">{b["date"]}</time></p></a>'
+        f'{review(b)}</article>'
         for i, b in enumerate(newest)
     )
 
