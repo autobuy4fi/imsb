@@ -76,9 +76,9 @@ def build(data):
     newest = list(reversed(books))
     n = len(books)
 
-    title = f"{NAME} | {PUBLISHER} IT·실용서 편집자 포트폴리오"
+    title = f"{NAME} | {PUBLISHER} IT·AI 실용서 편집자 포트폴리오"
     # 검색 결과에 잘리지 않도록 100자 안팎으로 둔다
-    desc = (f"{PUBLISHER} IT·실용서 편집자 {NAME}입니다. 《된다! 7일 실무 엑셀》, 《나, 개발자로 100명 취업시켰다》 등 "
+    desc = (f"{PUBLISHER} IT·AI 실용서 편집자 {NAME}입니다. 《된다! 7일 실무 엑셀》, 《나, 개발자로 100명 취업시켰다》 등 "
             f"2018년부터 {n}권을 편집했습니다. 원고 기획안을 기다립니다.")
 
     person_id = SITE + "#person"
@@ -184,7 +184,37 @@ def build(data):
         for i, b in enumerate(newest)
     )
 
-    upcoming = "\n".join(f"      <span>{e(t)}</span>" for t in data["upcoming"])
+    upcoming = ("<b>작업 중</b>" + "".join(f"<span>{e(t)}</span>" for t in data["upcoming"])
+                + f'<small>{e(data["upcoming_asof"])} 기준</small>') if data["upcoming"] else ""
+
+    # 전문 분야 태그: 분야별 권수
+    fields = "".join(f'<span>{c}<small>{sum(b["category"] == c for b in books)}</small></span>' for c in TONES)
+
+    by_cover = {b["cover"]: b for b in books}
+    cases = ""
+    if data["cases"]:
+        items = "\n".join(
+            f'<article class="case"><a href="{e(by_cover[c["cover"]]["link"])}" target="_blank" rel="noopener">'
+            f'<div class="cover">{img(by_cover[c["cover"]], by_cover[c["cover"]]["title"] + " 표지")}</div></a>'
+            f'<div><div class="kind">{e(c["kind"])}</div><h3>{e(by_cover[c["cover"]]["title"])}</h3>'
+            f'<ul>{"".join(f"<li>{e(pt)}</li>" for pt in c["points"])}</ul>{review(by_cover[c["cover"]])}</div></article>'
+            for c in data["cases"])
+        cases = ('\n<section id="cases"><div class="wrap"><div class="sec-head"><div><h2>대표 작업</h2>'
+                 '<p class="sub">편집자로서 어떤 문제를 발견하고 어떻게 풀었는지 소개합니다.</p></div></div>'
+                 f'<div class="cases">{items}</div></div></section>\n')
+
+    voices = ""
+    if data["voices"]:
+        items = "\n".join(
+            f'<figure class="card voice"><blockquote>“{e(v["quote"])}”</blockquote>'
+            f'<figcaption>— {e(v["author"])}, 《{e(v["book"])}》</figcaption></figure>' for v in data["voices"])
+        voices = ('\n<section id="voices"><div class="wrap"><div class="sec-head"><h2>함께한 저자들의 이야기</h2></div>'
+                  f'<div class="voices">{items}</div></div></section>\n')
+
+    notes = "\n".join(
+        f'<a class="card" href="{e(nt["url"])}" target="_blank" rel="noopener"><div class="kind">{e(nt["kind"])}</div>'
+        f'<h3>{e(nt["title"])}</h3><p>{e(nt["desc"])}</p><div class="when">{e(nt["date"])}</div></a>'
+        for nt in data["notes"])
 
     videos = "\n".join(
         f'<a class="vid" href="https://www.youtube.com/watch?v={v["id"]}" target="_blank" rel="noopener">'
@@ -195,7 +225,8 @@ def build(data):
     )
 
     return {"head": head, "count": str(n), "fan": fan, "filters": filters,
-            "grid": "\n" + grid + "\n", "upcoming": "\n" + upcoming + "\n", "videos": "\n" + videos + "\n"}
+            "grid": "\n" + grid + "\n", "upcoming": upcoming,
+            "fields": fields, "cases": cases, "voices": voices, "notes": "\n" + notes + "\n", "videos": "\n" + videos + "\n"}
 
 
 def main():
