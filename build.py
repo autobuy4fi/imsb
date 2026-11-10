@@ -52,11 +52,23 @@ def badge(b):
     return f'<span class="badge">{e(b["badge"])}</span>' if b.get("badge") else ""
 
 
+# 책 카드 아래에 붙는 글 링크: books.json 의 키, 버튼 이름, 구조화 데이터 종류
+POSTS = [("review", "편집 후기", "BlogPosting"), ("interview", "저자 인터뷰", "Article")]
+
+
 def review(b):
-    if not b.get("review"):
-        return ""
-    return (f'<a class="review" href="{e(b["review"])}" target="_blank" rel="noopener"'
-            f' aria-label="{e(b["title"])} 편집 후기">편집 후기 →</a>')
+    links = "".join(
+        f'<a class="review post-{key}" href="{e(b[key])}" target="_blank" rel="noopener"'
+        f' aria-label="{e(b["title"])} {label}">{label} →</a>'
+        for key, label, _ in POSTS if b.get(key)
+    )
+    return f'<div class="posts">{links}</div>' if links else ""
+
+
+def subject_of(b, person_id):
+    items = [{"@type": kind, "url": b[key], "name": f"{b['title']} {label}"}
+             for key, label, kind in POSTS if b.get(key)]
+    return {"subjectOf": items} if items else {}
 
 
 def build(data):
@@ -111,7 +123,7 @@ def build(data):
                             "image": SITE + f"covers/{b['cover']}.jpg",
                             "url": b["link"],
                             "inLanguage": "ko",
-                            **({"subjectOf": {"@type": "BlogPosting", "url": b["review"], "name": f"{b['title']} 편집 후기", "author": {"@id": person_id}}} if b.get("review") else {}),
+                            **subject_of(b, person_id),
                         },
                     }
                     for i, b in enumerate(newest)

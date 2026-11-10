@@ -1,5 +1,5 @@
 {
- "_설명": "책을 추가·수정하면 python3 build.py 를 실행해 index.html 을 다시 만든다. books 는 오래된 순서. 편집 후기 글이 있으면 그 책에 \"review\": \"글 주소\" 를 넣는다.",
+ "_설명": "책을 추가·수정하면 python3 build.py 를 실행해 index.html 을 다시 만든다. books 는 오래된 순서. 편집 후기는 \"review\", 저자 인터뷰는 \"interview\" 에 글 주소를 넣는다.",
  "hero_recent": 12,
  "upcoming": [
   "된다! 아이패드 파이널컷"
@@ -252,7 +252,8 @@
    "category": "블로그·SNS",
    "cover": "181117854",
    "link": "https://www.yes24.com/product/goods/181117854",
-   "review": "https://blog.naver.com/easyspub_it/224325712292"
+   "review": "https://blog.naver.com/easyspub_it/224325712292",
+   "interview": "https://blog.naver.com/easyspub_it/224235693315"
   },
   {
    "title": "된다! 링크드인 활용법",
@@ -260,21 +261,24 @@
    "category": "블로그·SNS",
    "cover": "178728770",
    "link": "https://www.yes24.com/product/goods/178728770",
-   "review": "https://blog.naver.com/easyspub_it/224351052110"
+   "review": "https://blog.naver.com/easyspub_it/224351052110",
+   "interview": "https://blog.naver.com/easyspub_it/224234666723"
   },
   {
    "title": "된다! 스레드 활용법",
    "date": "2026. 06.",
    "category": "블로그·SNS",
    "cover": "189520507",
-   "link": "https://www.yes24.com/product/goods/189520507"
+   "link": "https://www.yes24.com/product/goods/189520507",
+   "interview": "https://blog.naver.com/easyspub_it/224320916871"
   },
   {
    "title": "된다! 교사를 위한 바이브코딩 활용법",
    "date": "2026. 08.",
    "category": "AI",
    "cover": "194513646",
-   "link": "https://www.yes24.com/product/goods/194513646"
+   "link": "https://www.yes24.com/product/goods/194513646",
+   "interview": "https://blog.naver.com/easyspub_it/224377071749"
   },
   {
    "title": "된다! 7일 실무 엑셀 - 전면 개정판",
