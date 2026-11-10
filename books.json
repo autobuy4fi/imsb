@@ -1,0 +1,331 @@
+{
+ "_설명": "책을 추가·수정하면 python3 build.py 를 실행해 index.html 을 다시 만든다. books 는 오래된 순서.",
+ "featured": [
+  "194919963",
+  "197212617",
+  "126012074",
+  "189520507",
+  "125318563"
+ ],
+ "upcoming": [
+  "된다! 아이패드 파이널컷"
+ ],
+ "books": [
+  {
+   "title": "된다! 맥북&아이맥 - 맥OS 모하비",
+   "date": "2018. 11.",
+   "category": "맥·컴퓨터",
+   "cover": "66992518",
+   "link": "https://www.yes24.com/product/goods/66992518"
+  },
+  {
+   "title": "된다! 포토샵&일러스트레이터 CC 2019",
+   "date": "2018. 12.",
+   "category": "디자인·영상",
+   "cover": "67292951",
+   "link": "https://www.yes24.com/product/goods/67292951"
+  },
+  {
+   "title": "된다! 네이버 블로그&포스트 - 개정 2판",
+   "date": "2019. 02.",
+   "category": "블로그·SNS",
+   "cover": "k9791163030515",
+   "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=182418199"
+  },
+  {
+   "title": "된다! 7일 실무 엑셀",
+   "date": "2019. 07.",
+   "category": "오피스",
+   "cover": "76182394",
+   "link": "https://www.yes24.com/product/goods/76182394"
+  },
+  {
+   "title": "된다! 맥북&아이맥 - 맥OS 카탈리나",
+   "date": "2019. 10.",
+   "category": "맥·컴퓨터",
+   "cover": "80926758",
+   "link": "https://www.yes24.com/product/goods/80926758"
+  },
+  {
+   "title": "기계는 어떻게 생각하는가?",
+   "date": "2019. 12.",
+   "category": "교양·커리어",
+   "cover": "85125529",
+   "badge": "세종도서",
+   "link": "https://www.yes24.com/product/goods/126330334"
+  },
+  {
+   "title": "된다! 네이버 블로그&포스트 - 개정 3판",
+   "date": "2020. 03.",
+   "category": "블로그·SNS",
+   "cover": "89593210",
+   "link": "https://www.yes24.com/product/goods/89593210"
+  },
+  {
+   "title": "된다! 7일 유튜브 영상 편집 with 베가스 프로",
+   "date": "2020. 06.",
+   "category": "디자인·영상",
+   "cover": "90925620",
+   "link": "https://www.yes24.com/product/goods/90925620"
+  },
+  {
+   "title": "된다! 오늘 바로 되는 입문서 일러스트레이터",
+   "date": "2020. 11.",
+   "category": "디자인·영상",
+   "cover": "95164048",
+   "link": "https://www.yes24.com/product/goods/95164048"
+  },
+  {
+   "title": "된다! 맥북&아이맥 - 맥OS 빅 서",
+   "date": "2020. 11.",
+   "category": "맥·컴퓨터",
+   "cover": "95751581",
+   "link": "https://www.yes24.com/product/goods/95751581"
+  },
+  {
+   "title": "된다! 스마트 워크를 위한 구글 업무 활용법",
+   "date": "2021. 01.",
+   "category": "오피스",
+   "cover": "96556673",
+   "link": "https://www.yes24.com/product/goods/96556673"
+  },
+  {
+   "title": "된다! 네이버 블로그&포스트 - 개정 4판",
+   "date": "2021. 05.",
+   "category": "블로그·SNS",
+   "cover": "101864117",
+   "link": "https://www.yes24.com/product/goods/101864117"
+  },
+  {
+   "title": "데이터는 어떻게 자산이 되는가?",
+   "date": "2021. 08.",
+   "category": "교양·커리어",
+   "cover": "103308060",
+   "link": "https://www.yes24.com/product/goods/103308060"
+  },
+  {
+   "title": "된다! 맥북&아이맥 - 맥OS 몬터레이",
+   "date": "2021. 11.",
+   "category": "맥·컴퓨터",
+   "cover": "105248153",
+   "link": "https://www.yes24.com/product/goods/105248153"
+  },
+  {
+   "title": "된다! 최반장의 실무 엑셀 with 피벗 테이블",
+   "date": "2022. 02.",
+   "category": "오피스",
+   "cover": "107473572",
+   "link": "https://www.yes24.com/product/goods/107473572"
+  },
+  {
+   "title": "된다! 네이버 블로그 상위 노출",
+   "date": "2022. 06.",
+   "category": "블로그·SNS",
+   "cover": "110328879",
+   "link": "https://www.yes24.com/product/goods/110328879"
+  },
+  {
+   "title": "된다! 뚝딱뚝딱 내 컴퓨터 문제 해결",
+   "date": "2022. 08.",
+   "category": "맥·컴퓨터",
+   "cover": "111719275",
+   "link": "https://www.yes24.com/product/goods/111719275"
+  },
+  {
+   "title": "된다! 실무 엑셀 파워포인트 워드&한글",
+   "date": "2022. 10.",
+   "category": "오피스",
+   "cover": "114627204",
+   "link": "https://www.yes24.com/product/goods/114627204"
+  },
+  {
+   "title": "된다! 맥북&아이맥 - 맥OS 벤투라",
+   "date": "2022. 12.",
+   "category": "맥·컴퓨터",
+   "cover": "116071239",
+   "link": "https://www.yes24.com/product/goods/116071239"
+  },
+  {
+   "title": "된다! 엑셀 수식&함수",
+   "date": "2023. 05.",
+   "category": "오피스",
+   "cover": "118700994",
+   "link": "https://www.yes24.com/product/goods/118700994"
+  },
+  {
+   "title": "된다! 하루 만에 끝내는 챗GPT 활용법",
+   "date": "2023. 06.",
+   "category": "AI",
+   "cover": "119184789",
+   "link": "https://www.yes24.com/product/goods/119184789"
+  },
+  {
+   "title": "된다! 업무 자동화를 위한 구글 앱스 스크립트",
+   "date": "2023. 07.",
+   "category": "오피스",
+   "cover": "119866818",
+   "link": "https://www.yes24.com/product/goods/119866818"
+  },
+  {
+   "title": "된다! 7일 실무 한글",
+   "date": "2023. 10.",
+   "category": "오피스",
+   "cover": "122598455",
+   "link": "https://www.yes24.com/product/goods/122598455"
+  },
+  {
+   "title": "된다! 생성형 AI 사진&이미지 만들기",
+   "date": "2023. 10.",
+   "category": "AI",
+   "cover": "122896147",
+   "link": "https://www.yes24.com/product/goods/122896147"
+  },
+  {
+   "title": "된다! 맥북&아이맥 - 맥OS 소노마",
+   "date": "2024. 01.",
+   "category": "맥·컴퓨터",
+   "cover": "124260639",
+   "link": "https://www.yes24.com/product/goods/124260639"
+  },
+  {
+   "title": "Do it! 웹 사이트 기획 입문 - 전면 개정판",
+   "date": "2024. 01.",
+   "category": "교양·커리어",
+   "cover": "124439550",
+   "link": "https://www.yes24.com/product/goods/124439550"
+  },
+  {
+   "title": "된다! 네이버 블로그 상위 노출 - 전면 개정판",
+   "date": "2024. 03.",
+   "category": "블로그·SNS",
+   "cover": "125318563",
+   "link": "https://www.yes24.com/product/goods/125318563"
+  },
+  {
+   "title": "일 잘하는 팀장",
+   "date": "2024. 04.",
+   "category": "교양·커리어",
+   "cover": "125692594",
+   "link": "https://www.yes24.com/product/goods/125692594"
+  },
+  {
+   "title": "나, 개발자로 100명 취업시켰다",
+   "date": "2024. 05.",
+   "category": "교양·커리어",
+   "cover": "126012074",
+   "badge": "세종도서",
+   "link": "https://www.yes24.com/product/goods/126012074"
+  },
+  {
+   "title": "된다! 블로그 10분 작성법",
+   "date": "2024. 10.",
+   "category": "블로그·SNS",
+   "cover": "134029109",
+   "link": "https://www.yes24.com/product/goods/134029109"
+  },
+  {
+   "title": "된다! 7일 구글 스프레드시트",
+   "date": "2025. 01.",
+   "category": "오피스",
+   "cover": "140407763",
+   "link": "https://www.yes24.com/product/goods/140407763"
+  },
+  {
+   "title": "된다! 업무에 바로 쓰는 구글 활용법",
+   "date": "2025. 04.",
+   "category": "오피스",
+   "cover": "144253147",
+   "link": "https://www.yes24.com/product/goods/144253147"
+  },
+  {
+   "title": "된다! 하루 만에 끝내는 이미지 생성 AI 활용법",
+   "date": "2025. 08.",
+   "category": "AI",
+   "cover": "151780100",
+   "link": "https://www.yes24.com/product/goods/151780100"
+  },
+  {
+   "title": "된다! 네이버 스마트플레이스",
+   "date": "2026. 01.",
+   "category": "블로그·SNS",
+   "cover": "170504548",
+   "link": "https://www.yes24.com/product/goods/170504548"
+  },
+  {
+   "title": "된다! AI 상위 노출",
+   "date": "2026. 03.",
+   "category": "블로그·SNS",
+   "cover": "181117854",
+   "link": "https://www.yes24.com/product/goods/181117854"
+  },
+  {
+   "title": "된다! 링크드인 활용법",
+   "date": "2026. 03.",
+   "category": "블로그·SNS",
+   "cover": "178728770",
+   "link": "https://www.yes24.com/product/goods/178728770"
+  },
+  {
+   "title": "된다! 스레드 활용법",
+   "date": "2026. 06.",
+   "category": "블로그·SNS",
+   "cover": "189520507",
+   "link": "https://www.yes24.com/product/goods/189520507"
+  },
+  {
+   "title": "된다! 교사를 위한 바이브코딩 활용법",
+   "date": "2026. 08.",
+   "category": "AI",
+   "cover": "194513646",
+   "link": "https://www.yes24.com/product/goods/194513646"
+  },
+  {
+   "title": "된다! 7일 실무 엑셀 - 전면 개정판",
+   "date": "2026. 09.",
+   "category": "오피스",
+   "cover": "194919963",
+   "link": "https://www.yes24.com/product/goods/194919963"
+  },
+  {
+   "title": "된다! 하루 만에 끝내는 클로드 활용법",
+   "date": "2026. 10.",
+   "category": "AI",
+   "cover": "197212617",
+   "link": "https://www.yes24.com/product/goods/197212617"
+  },
+  {
+   "title": "된다! AI 법률 상담",
+   "date": "2026. 10.",
+   "category": "AI",
+   "cover": "198982743",
+   "link": "https://www.yes24.com/product/goods/198982743"
+  }
+ ],
+ "videos": [
+  {
+   "id": "W2jnxPdgg4k",
+   "kind": "사내 강의 · 촬영 · 편집",
+   "title": "출판 편집자가 말아 주는 생성형 AI 활용법 (챗GPT, 제미나이, 구글 AI 스튜디오, 그록3)"
+  },
+  {
+   "id": "VXrvHmu487c",
+   "kind": "1분 책 소개",
+   "title": "[내 책 내가 소개!] 된다! 하루 5분 노션 활용법"
+  },
+  {
+   "id": "M3GRp9Kjflg",
+   "kind": "신간 소개 기획·편집",
+   "title": "Do it! 웹 사이트 기획 입문 - 전면 개정판"
+  },
+  {
+   "id": "TgUoaUtrcow",
+   "kind": "저자 강연 요약",
+   "title": "바쁜 직장인을 위해 10분으로 요약한 《된다! 미드저니》 줌 강의"
+  },
+  {
+   "id": "0nb1YfezuGs",
+   "kind": "저자 인터뷰",
+   "title": "된다! 네이버 블로그 상위 노출 | 황윤정 저자"
+  }
+ ]
+}
