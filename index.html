@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>편집자 임승빈</title>
+<meta name="description" content="이지스퍼블리싱 IT·실용서 편집자 임승빈의 포트폴리오. 정직하게 만드는 책.">
+<meta property="og:title" content="편집자 임승빈 — 정직하게 만드는 책">
+<meta property="og:description" content="이지스퍼블리싱 IT·실용서 편집자. 2018년부터 40권의 책을 만들었습니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#fbfaf8; --surface:#ffffff; --ink:#1c1b19; --ink-2:#55524c; --ink-3:#8b877f;
+  --line:#e8e5df; --accent:#d4471f; --accent-soft:#fbe9e3; --shadow:0 1px 2px rgba(28,27,25,.06),0 8px 24px -8px rgba(28,27,25,.18);
+  --shadow-lift:0 2px 4px rgba(28,27,25,.08),0 20px 40px -12px rgba(28,27,25,.32);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#141413; --surface:#1d1c1a; --ink:#f1efea; --ink-2:#b9b5ac; --ink-3:#86827a;
+    --line:#2e2c29; --accent:#ff7a52; --accent-soft:#3a2219; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -8px rgba(0,0,0,.6);
+    --shadow-lift:0 2px 4px rgba(0,0,0,.5),0 20px 40px -12px rgba(0,0,0,.8);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;line-height:1.65;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
+.logo{font-weight:700;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;font-size:15px}
+nav ul a{text-decoration:none;color:var(--ink-2)}
+nav ul a:hover{color:var(--ink)}
+@media (max-width:600px){nav ul{gap:14px;font-size:14px}nav ul li.hide-sm{display:none}}
+
+/* hero */
+.hero{padding:72px 0 56px;overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:5px 12px;border-radius:999px;margin-bottom:20px}
+h1{font-size:clamp(34px,5.2vw,54px);line-height:1.18;letter-spacing:-.035em;font-weight:800}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{margin-top:20px;font-size:clamp(16px,1.6vw,18px);color:var(--ink-2);max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line);background:var(--surface);transition:transform .15s,border-color .15s}
+.btn:hover{transform:translateY(-1px);border-color:var(--ink-3)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.stats{display:flex;gap:32px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.stats b{display:block;font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.2}
+.stats span{font-size:13px;color:var(--ink-3)}
+
+.fan{position:relative;height:420px}
+.fan .bk{position:absolute;bottom:20px;width:46%;aspect-ratio:7/10;border-radius:4px 8px 8px 4px;overflow:hidden;box-shadow:var(--shadow-lift);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.fan .bk img,.fan .bk .ph{width:100%;height:100%;object-fit:cover}
+.fan .bk:nth-child(1){left:0;transform:rotate(-12deg) translateY(10px);z-index:1}
+.fan .bk:nth-child(2){left:13%;transform:rotate(-6deg);z-index:2}
+.fan .bk:nth-child(3){left:27%;transform:rotate(0) translateY(-14px);z-index:5}
+.fan .bk:nth-child(4){left:41%;transform:rotate(6deg);z-index:2}
+.fan .bk:nth-child(5){left:54%;transform:rotate(12deg) translateY(10px);z-index:1}
+.fan:hover .bk:nth-child(1){transform:rotate(-16deg) translate(-14px,6px)}
+.fan:hover .bk:nth-child(2){transform:rotate(-8deg) translate(-8px,-4px)}
+.fan:hover .bk:nth-child(3){transform:translateY(-24px)}
+.fan:hover .bk:nth-child(4){transform:rotate(8deg) translate(8px,-4px)}
+.fan:hover .bk:nth-child(5){transform:rotate(16deg) translate(14px,6px)}
+@media (max-width:860px){
+  .hero{padding:44px 0 32px}
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .fan{height:min(72vw,360px);order:-1;max-width:460px;width:100%;margin:0 auto}
+  .stats{gap:22px}
+}
+
+/* sections */
+section{padding:64px 0;scroll-margin-top:56px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.03em;font-weight:800;line-height:1.25}
+.sub{color:var(--ink-3);font-size:15px;margin-top:6px}
+@media (max-width:600px){section{padding:44px 0}}
+
+/* filters */
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font:inherit;font-size:14px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer;transition:all .15s}
+.chip:hover{border-color:var(--ink-3)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip small{opacity:.6;margin-left:4px;font-size:12px}
+
+/* book grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:40px 28px}
+@media (max-width:600px){.grid{grid-template-columns:repeat(3,1fr);gap:24px 12px}}
+@media (max-width:360px){.grid{grid-template-columns:repeat(2,1fr)}}
+.book{text-decoration:none;display:flex;flex-direction:column}
+.cover{position:relative;aspect-ratio:7/10;border-radius:3px 6px 6px 3px;overflow:hidden;box-shadow:var(--shadow);background:var(--line);transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.14) 0,rgba(255,255,255,.08) 2.5%,transparent 6%);pointer-events:none}
+.cover img{width:100%;height:100%;object-fit:cover}
+.book:hover .cover{transform:translateY(-6px);box-shadow:var(--shadow-lift)}
+.badge{position:absolute;top:8px;left:8px;z-index:2;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;background:var(--accent);color:#fff;letter-spacing:-.01em}
+.book h3{font-size:15px;font-weight:600;line-height:1.4;margin-top:14px;letter-spacing:-.01em}
+.book p{font-size:13px;color:var(--ink-3);margin-top:3px}
+@media (max-width:600px){.book h3{font-size:13px;margin-top:10px}.book p{font-size:12px}.badge{font-size:10px;padding:2px 6px;top:6px;left:6px}}
+.ph{display:flex;flex-direction:column;justify-content:space-between;padding:14% 12%;color:#fff;height:100%}
+.ph .t{font-weight:800;font-size:clamp(13px,1.4vw,17px);line-height:1.3;letter-spacing:-.02em}
+.ph .s{font-size:11px;opacity:.8;font-weight:600}
+@media (max-width:600px){.ph .t{font-size:12px}.ph .s{font-size:9px}}
+.book.hidden{display:none}
+
+.upcoming{margin-top:44px;padding:20px 24px;border:1px dashed var(--line);border-radius:12px;display:flex;gap:12px 28px;flex-wrap:wrap;align-items:center;font-size:15px}
+.upcoming b{font-size:13px;color:var(--accent);font-weight:700}
+.upcoming span{color:var(--ink-2)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+.about .story p{color:var(--ink-2);margin-bottom:16px;font-size:16px}
+.about .story p strong{color:var(--ink)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{font-size:16px;margin-bottom:14px}
+.card ul{list-style:none;display:grid;gap:10px}
+.card li{position:relative;padding-left:18px;color:var(--ink-2);font-size:15px}
+.card li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:2px;background:var(--accent)}
+.card + .card{margin-top:16px}
+.timeline{font-size:15px;color:var(--ink-2)}
+.timeline b{color:var(--ink)}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:24px}}
+
+/* video */
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.vid{text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.vid:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.vid .th{position:relative;aspect-ratio:16/9;background:var(--line);overflow:hidden}
+.vid .th img{width:100%;height:100%;object-fit:cover}
+.vid .th::after{content:"▶";position:absolute;right:12px;bottom:12px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:13px;display:grid;place-items:center;padding-left:2px}
+.vid .meta{padding:14px 16px 16px}
+.vid .kind{font-size:12px;font-weight:700;color:var(--accent)}
+.vid h3{font-size:15px;font-weight:600;line-height:1.45;margin-top:4px}
+.note{margin-top:16px;font-size:14px;color:var(--ink-3)}
+
+/* activities */
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.act{display:block;text-decoration:none}
+.act .when{font-size:13px;color:var(--ink-3);font-weight:600}
+.act h3{font-size:17px;margin:4px 0 6px;line-height:1.4}
+.act p{font-size:14px;color:var(--ink-2)}
+.act .go{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:14px;padding:8px 14px;border-radius:8px;background:var(--surface);border:1px solid var(--line);color:var(--ink-2)}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-radius:20px;padding:56px 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+.contact h2{color:var(--bg)}
+.contact p{opacity:.75;margin-top:14px;font-size:16px}
+.contact .mail{display:inline-block;margin-top:24px;font-size:clamp(18px,2.4vw,24px);font-weight:700;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:2px}
+.sns{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.sns a{font-size:14px;padding:9px 14px;border-radius:8px;border:1px solid color-mix(in srgb,var(--bg) 25%,transparent);text-decoration:none;transition:background .15s}
+.sns a:hover{background:color-mix(in srgb,var(--bg) 12%,transparent)}
+@media (max-width:860px){.contact{grid-template-columns:1fr;padding:36px 24px;border-radius:16px}.sns{justify-content:flex-start}}
+footer{padding:36px 0 48px;color:var(--ink-3);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">임승빈<span>.</span></a>
+    <ul>
+      <li><a href="#books">출간 도서</a></li>
+      <li><a href="#about">소개</a></li>
+      <li class="hide-sm"><a href="#videos">영상</a></li>
+      <li><a href="#contact">연락하기</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">이지스퍼블리싱 · IT/실용서 편집자</span>
+      <h1>정직하게<br>만드는 <em>책</em>.</h1>
+      <p class="lead">안녕하세요, 편집자 임승빈입니다. 2018년부터 엑셀·AI·블로그·맥OS까지, ‘구체적으로 사람을 도와주는 책’을 만들고 있습니다. 내 책을 함께 만들 편집자가 궁금하셨던 예비 저자분들께 저를 소개합니다.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">원고 기획안 보내기 →</a>
+        <a class="btn" href="#books">만든 책 보기</a>
+      </div>
+      <div class="stats">
+        <div><b id="stat-books">40권</b><span>출간 작업</span></div>
+        <div><b>2018~</b><span>이지스퍼블리싱</span></div>
+        <div><b>2권</b><span>세종도서 선정</span></div>
+      </div>
+    </div>
+    <div class="fan" id="fan" aria-hidden="true"></div>
+  </div>
+</header>
+
+<section id="books">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>출간 작업 목록</h2>
+        <p class="sub">표지를 누르면 Yes24 도서 페이지로 이동합니다.</p>
+      </div>
+    </div>
+    <div class="chips" id="filters" role="toolbar" aria-label="분야별 보기" style="margin-bottom:32px"></div>
+    <div class="grid" id="grid"></div>
+    <div class="upcoming">
+      <b>작업 중</b>
+      <span>된다! AI 법률 비서 만들기</span>
+      <span>된다! 아이패드 파이널컷</span>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head"><h2>저는 이런 편집자예요</h2></div>
+    <div class="about">
+      <div class="story">
+        <p>중학생 때는 <strong>게임 기자</strong>를 꿈꾸며 게임 웹진에서 (아주 짧게) 기자 활동을 했고, 고등학교 3년 동안은 문예부에서 교내 문집과 시화전을 기획·편집했습니다.</p>
+        <p>국어국문학과에 진학해 학과 문집 『연촌문향』을 3년간 만들었고, 독서 클럽에서는 최우수 클럽으로 선정되기도 했습니다.</p>
+        <p>졸업을 앞두고 <strong>‘내가 정직하게 할 수 있는 일이 무엇일까?’</strong>를 고민하던 중, 출판 평론가 김성신 교수님의 조언으로 책 만드는 일을 업으로 삼기로 했습니다. 그렇게 <a href="https://www.easyspub.co.kr/Main/pub" target="_blank" rel="noopener">이지스퍼블리싱</a>에서 IT·실용서 편집자로 일하게 되었습니다.</p>
+        <p>이지스퍼블리싱의 슬로건은 <strong>‘구체적으로 사람을 도와주는 책’</strong>입니다. 제가 하고 싶던 ‘정직하게 누군가를 도와주는 일’과 닮아 있어서, 지금도 즐겁게 책을 만들고 있습니다. 다양한 경험을 가진 저자분들과 작업하며 늘 새로 배운다는 마음으로요. 😊</p>
+      </div>
+      <div>
+        <div class="card">
+          <h3>스스로 생각하는 강점</h3>
+          <ul>
+            <li>OA 실용서부터 코딩·데이터과학·개발 이론서까지 다양한 분야 출간 경험</li>
+            <li>국문과 출신이지만 IT·실용 분야 이해도가 높은 편</li>
+            <li>신기술을 쓰는 데 거부감이나 편견이 없음</li>
+            <li>소통이 잘 됨 (교회 리더, 최우수 독서 클럽 리더 등)</li>
+            <li>원고 기획부터 마케팅까지! 프리미어 프로로 홍보 영상도 직접 편집</li>
+          </ul>
+        </div>
+        <div class="card timeline">
+          <h3>경력</h3>
+          <b>이지스퍼블리싱</b> · 2018. 08. ~ 현재
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>강의 · 영상 작업</h2>
+        <p class="sub">책을 만든 뒤 독자에게 닿게 하는 일까지 함께합니다.</p>
+      </div>
+    </div>
+    <div class="vids" id="vids"></div>
+    <p class="note">영상은 프리미어 프로로, 섬네일은 파워포인트로 작업했습니다. 실력을 더 키워 볼게요!</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>외부 활동</h2></div>
+    <div class="acts">
+      <a class="card act" href="https://www.instagram.com/pm.kpm21/" target="_blank" rel="noopener">
+        <div class="when">2025</div>
+        <h3>출판 전문지 〈기획회의〉 1년 서평단</h3>
+        <p>블로그와 인스타그램에 1년간 서평을 연재했습니다.</p>
+        <span class="go">기획회의 보기 ↗</span>
+      </a>
+      <a class="card act" href="https://blog.naver.com/autobuy4fi/224061097256" target="_blank" rel="noopener">
+        <div class="when">2025</div>
+        <h3>〈기획회의〉 641호 필진 참여</h3>
+        <p>출판 전문지에 편집자로서 글을 실었습니다.</p>
+        <span class="go">글 읽기 ↗</span>
+      </a>
+      <a class="card act" href="https://www.edaily.co.kr/News/Read?newsId=01610486645316080&mediaCodeNo=257&OutLnkChk=Y" target="_blank" rel="noopener">
+        <div class="when">2026 · 이데일리</div>
+        <h3>출판 문턱 없앤 AI… “나도 이젠 작가”</h3>
+        <p>AI와 출판에 관한 기사에 참여했습니다.</p>
+        <span class="go">기사 보기 ↗</span>
+      </a>
+    </div>
+    <div style="margin-top:48px">
+      <h3 style="font-size:18px;margin-bottom:14px">요즘 관심 있는 분야</h3>
+      <div class="tags">
+        <span class="tag">오피스 활용 (엑셀 · 파워포인트 · 구글 워크스페이스)</span>
+        <span class="tag">생성형 AI (챗GPT · 제미나이 · 클로드 · 퍼플렉시티 · 젠스파크)</span>
+        <span class="tag">마케팅 도구 (메타 · 구글 애널리틱스)</span>
+        <span class="tag">영상 편집 (캡컷 · 프리미어 프로)</span>
+        <span class="tag">업무 생산성 (노션 · 자기계발 도구)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:16px">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>책으로 만들고 싶은<br>아이템이 있으신가요?</h2>
+        <p>저는 저자의 ‘능력’보다 ‘열정’을 더 크게 봅니다. IT·실용서를 쓰고 싶으시다면 <b>원고 기획안</b>과 <b>샘플 원고</b>를 보내 주세요. 자료를 보면서 이야기하면 훨씬 빨리 판단할 수 있어요.</p>
+        <a class="mail" href="mailto:imsb@easyspub.co.kr">imsb@easyspub.co.kr</a>
+      </div>
+      <div>
+        <p style="margin:0 0 12px;font-size:14px">친구 신청, 1촌 신청 다 환영해요! 🙌</p>
+        <div class="sns">
+          <a href="https://www.instagram.com/editor_b__/" target="_blank" rel="noopener">인스타그램</a>
+          <a href="https://www.threads.com/@editor_b__" target="_blank" rel="noopener">스레드</a>
+          <a href="https://www.linkedin.com/in/%EC%8A%B9%EB%B9%88-%EC%9E%84-089515186/" target="_blank" rel="noopener">링크드인</a>
+          <a href="https://www.facebook.com/imsb1211" target="_blank" rel="noopener">페이스북</a>
+          <a href="https://blog.naver.com/autobuy4fi" target="_blank" rel="noopener">네이버 블로그</a>
+          <a href="https://journal6146.tistory.com/" target="_blank" rel="noopener">티스토리</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 임승빈 · 이지스퍼블리싱 편집자</footer>
+
+<script>
+// [제목, 출간 시기, 분야, Yes24 상품번호(없으면 null), 배지]
+const BOOKS = [
+  ["된다! 맥북&아이맥 - 맥OS 모하비","2018. 11.","맥·컴퓨터",null],
+  ["된다! 포토샵&일러스트레이터 CC 2019","2018. 12.","디자인·영상",null],
+  ["된다! 네이버 블로그&포스트 - 개정 2판","2019. 02.","블로그·SNS",null],
+  ["된다! 7일 실무 엑셀","2019. 07.","오피스","76182394"],
+  ["된다! 맥북&아이맥 - 맥OS 카탈리나","2019. 10.","맥·컴퓨터",null],
+  ["기계는 어떻게 생각하는가?","2019. 12.","교양·커리어","126330334","세종도서"],
+  ["된다! 네이버 블로그&포스트 - 개정 3판","2020. 03.","블로그·SNS",null],
+  ["된다! 7일 유튜브 영상 편집 with 베가스 프로","2020. 06.","디자인·영상",null],
+  ["된다! 오늘 바로 되는 입문서 일러스트레이터","2020. 11.","디자인·영상","95164048"],
+  ["된다! 맥북&아이맥 - 맥OS 빅 서","2020. 11.","맥·컴퓨터",null],
+  ["된다! 스마트 워크를 위한 구글 업무 활용법","2021. 01.","오피스","96556673"],
+  ["된다! 네이버 블로그&포스트 - 개정 4판","2021. 05.","블로그·SNS",null],
+  ["데이터는 어떻게 자산이 되는가?","2021. 08.","교양·커리어","103308060"],
+  ["된다! 맥북&아이맥 - 맥OS 몬터레이","2021. 11.","맥·컴퓨터",null],
+  ["된다! 최반장의 실무 엑셀 with 피벗 테이블","2022. 02.","오피스","107473572"],
+  ["된다! 네이버 블로그 상위 노출","2022. 06.","블로그·SNS",null],
+  ["된다! 뚝딱뚝딱 내 컴퓨터 문제 해결","2022. 08.","맥·컴퓨터","111719275"],
+  ["된다! 실무 엑셀 파워포인트 워드&한글","2022. 10.","오피스","114627204"],
+  ["된다! 맥북&아이맥 - 맥OS 벤투라","2022. 12.","맥·컴퓨터",null],
+  ["된다! 엑셀 수식&함수","2023. 05.","오피스","118700994"],
+  ["된다! 하루 만에 끝내는 챗GPT 활용법","2023. 06.","AI",null],
+  ["된다! 업무 자동화를 위한 구글 앱스 스크립트","2023. 07.","오피스","119866818"],
+  ["된다! 7일 실무 한글","2023. 10.","오피스","122598455"],
+  ["된다! 생성형 AI 사진&이미지 만들기","2023. 10.","AI","122896147"],
+  ["된다! 맥북&아이맥 - 맥OS 소노마","2024. 01.","맥·컴퓨터","124260639"],
+  ["Do it! 웹 사이트 기획 입문 - 전면 개정판","2024. 01.","교양·커리어","124439550"],
+  ["된다! 네이버 블로그 상위 노출 - 전면 개정판","2024. 03.","블로그·SNS","125318563"],
+  ["일 잘하는 팀장","2024. 04.","교양·커리어","125692594"],
+  ["나, 개발자로 100명 취업시켰다","2024. 05.","교양·커리어","126012074","세종도서"],
+  ["된다! 블로그 10분 작성법","2024. 10.","블로그·SNS","134029109"],
+  ["된다! 7일 구글 스프레드시트","2025. 01.","오피스","140407763"],
+  ["된다! 업무에 바로 쓰는 구글 활용법","2025. 04.","오피스","144253147"],
+  ["된다! 하루 만에 끝내는 이미지 생성 AI 활용법","2025. 08.","AI","151780100"],
+  ["된다! 네이버 스마트플레이스","2026. 01.","블로그·SNS","170504548"],
+  ["된다! AI 상위 노출","2026. 03.","블로그·SNS","181117854"],
+  ["된다! 링크드인 활용법","2026. 03.","블로그·SNS","178728770"],
+  ["된다! 스레드 활용법","2026. 06.","블로그·SNS","189520507"],
+  ["된다! 교사를 위한 바이브코딩 활용법","2026. 08.","AI","194513646"],
+  ["된다! 7일 실무 엑셀 - 전면 개정판","2026. 09.","오피스","194919963"],
+  ["된다! 하루 만에 끝내는 클로드 활용법","2026. 10.","AI","197212617"],
+].reverse();
+
+const FEATURED = ["194919963","197212617","126012074","189520507","125318563"]; // 히어로에 펼쳐 둘 표지
+const TONES = {"AI":"#3b4bd8","오피스":"#1f8a5b","블로그·SNS":"#d4471f","맥·컴퓨터":"#3a3a3c","디자인·영상":"#8a3fd1","교양·커리어":"#b07a1c"};
+
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const series = t => t.startsWith("Do it!") ? "Do it!" : t.startsWith("된다!") ? "된다!" : "이지스퍼블리싱";
+const placeholder = (b) => `<div class="ph" style="background:linear-gradient(160deg,${TONES[b[2]]},color-mix(in srgb,${TONES[b[2]]} 60%,#000))"><span class="s">${series(b[0])}</span><span class="t">${esc(b[0].replace(/^(된다!|Do it!)\s*/,""))}</span><span class="s">${b[1]}</span></div>`;
+const coverHTML = (b) => b[3]
+  ? `<img src="https://image.yes24.com/goods/${b[3]}/L" alt="${esc(b[0])} 표지" loading="lazy" data-i="${BOOKS.indexOf(b)}">`
+  : placeholder(b);
+
+// 표지 이미지를 못 불러오면 직접 만든 표지로 바꾼다
+document.addEventListener("error", e => {
+  const img = e.target;
+  if (img.tagName === "IMG" && img.dataset.i) img.outerHTML = placeholder(BOOKS[+img.dataset.i]);
+}, true);
+
+// 히어로 표지 부채
+document.getElementById("fan").innerHTML = FEATURED
+  .map(id => BOOKS.find(b => b[3] === id))
+  .map(b => `<div class="bk">${coverHTML(b)}</div>`).join("");
+
+// 도서 그리드
+const grid = document.getElementById("grid");
+grid.innerHTML = BOOKS.map(b => {
+  const tag = b[3] ? "a" : "div";
+  const href = b[3] ? ` href="https://www.yes24.com/product/goods/${b[3]}" target="_blank" rel="noopener"` : "";
+  return `<${tag} class="book" data-cat="${b[2]}"${href}>
+    <div class="cover">${b[4] ? `<span class="badge">${b[4]}</span>` : ""}${coverHTML(b)}</div>
+    <h3>${esc(b[0])}</h3><p>${b[1]}</p></${tag}>`;
+}).join("");
+document.getElementById("stat-books").textContent = BOOKS.length + "권";
+
+// 분야 필터
+const cats = ["전체", ...Object.keys(TONES)];
+const filters = document.getElementById("filters");
+filters.innerHTML = cats.map((c, i) => {
+  const n = c === "전체" ? BOOKS.length : BOOKS.filter(b => b[2] === c).length;
+  return `<button class="chip" aria-pressed="${i === 0}" data-cat="${c}">${c}<small>${n}</small></button>`;
+}).join("");
+filters.addEventListener("click", e => {
+  const btn = e.target.closest(".chip"); if (!btn) return;
+  filters.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c === btn));
+  const cat = btn.dataset.cat;
+  grid.querySelectorAll(".book").forEach(el => el.classList.toggle("hidden", cat !== "전체" && el.dataset.cat !== cat));
+});
+
+// 영상
+const VIDEOS = [
+  ["W2jnxPdgg4k","사내 강의 · 촬영 · 편집","출판 편집자가 말아 주는 생성형 AI 활용법 (챗GPT, 제미나이, 구글 AI 스튜디오, 그록3)"],
+  ["VXrvHmu487c","1분 책 소개","[내 책 내가 소개!] 된다! 하루 5분 노션 활용법"],
+  ["M3GRp9Kjflg","신간 소개 기획·편집","Do it! 웹 사이트 기획 입문 - 전면 개정판"],
+  ["TgUoaUtrcow","저자 강연 요약","바쁜 직장인을 위해 10분으로 요약한 《된다! 미드저니》 줌 강의"],
+  ["0nb1YfezuGs","저자 인터뷰","된다! 네이버 블로그 상위 노출 | 황윤정 저자"],
+];
+document.getElementById("vids").innerHTML = VIDEOS.map(([id, kind, title]) =>
+  `<a class="vid" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">
+    <div class="th"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"></div>
+    <div class="meta"><div class="kind">${kind}</div><h3>${esc(title)}</h3></div></a>`).join("");
+</script>
+</body>
+</html>
